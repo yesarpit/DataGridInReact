@@ -25,8 +25,9 @@ test('it should have "Delete Rows" button', () => {
 })
 
 
-test('it should have table row', () => {
-    const { container,debug } = render(<GridContainer />)
-    const tableHeaderRow = container.querySelector("tr")
-    expect(tableHeaderRow).toBeInTheDocument()
+test('it should have 101 rows present (100 data rows + 1 header row)', () => {
+    const { container } = render(<GridContainer />)
+    const tableHeaderRow = container.querySelectorAll("tr")
+    expect(tableHeaderRow.length).toBe(101)
 })
+

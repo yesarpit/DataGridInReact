@@ -60,7 +60,7 @@ export class GridContainer extends React.Component {
                 <TableHeaderColumn dataField='address'>Address</TableHeaderColumn>
                 <TableHeaderColumn dataField='pin'>Pin</TableHeaderColumn>
                 <TableHeaderColumn dataField='country'>Country</TableHeaderColumn>
-                <TableHeaderColumn dataFormat={this.deleteButtonCell.bind(this)} dataField='country'>Action</TableHeaderColumn>
+                <TableHeaderColumn dataFormat={this.deleteButtonCell.bind(this)} >Action</TableHeaderColumn>
             </BootstrapTable>
         );
     }
