@@ -8,6 +8,13 @@ This is built using react.
 ### Overview
 ![Screenshot](/images/screen1.png)
 
+### Pagination
+![Delete Row](/images/screen5.png)
+
+### Filtering
+![Delete Row](/images/screen6.png)
+
+
 ### Add row
 ![Add Row](/images/screen2.png)
 
@@ -16,3 +23,4 @@ This is built using react.
 
 ### Delete multiple rows
 ![Delete Row](/images/screen4.png)
+
