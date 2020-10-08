@@ -1,6 +1,6 @@
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import data from '../data/data';
-var React = require('react');
+import React from 'react';
 
 // All constants
 const selectRowProp = {
@@ -46,17 +46,17 @@ export class GridContainer extends React.Component {
             <button className={primaryClass} onClick={this.deleteCorrespondingRow.bind(this, row, country)} >Delete Row</button>
         )
     }
-    
+
     render() {
-        const options={
-            insertBtn:this.createCustomInsertButton,
-            deleteBtn:this.createCustomDeleteButton
+        const options = {
+            insertBtn: this.createCustomInsertButton,
+            deleteBtn: this.createCustomDeleteButton
         }
         return (
-            <BootstrapTable data={this.state.tableData} options={options} insertRow deleteRow selectRow={selectRowProp}
+            <BootstrapTable data={this.state.tableData} options={options} pagination insertRow deleteRow selectRow={selectRowProp}
             >
-                <TableHeaderColumn dataField='id' isKey={true} >ID</TableHeaderColumn>
-                <TableHeaderColumn dataField='name'>Name</TableHeaderColumn>
+                <TableHeaderColumn dataField='id' dataSort={true} isKey={true} >ID</TableHeaderColumn>
+                <TableHeaderColumn dataField='name' dataSort={true} filter={{ type: 'TextFilter' }}>Name</TableHeaderColumn>
                 <TableHeaderColumn dataField='address'>Address</TableHeaderColumn>
                 <TableHeaderColumn dataField='pin'>Pin</TableHeaderColumn>
                 <TableHeaderColumn dataField='country'>Country</TableHeaderColumn>
